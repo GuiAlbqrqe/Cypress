@@ -17,15 +17,18 @@ module.exports = defineConfig({
   }
 },
   chromeWebSecurity: false,
-  allowCypressEnv: false,
   videosFolder: 'cypress/videos',
   video: true,
   screenshotsFolder: 'cypress/screenshots',
 
   e2e: {
     baseUrl: 'https://www.saucedemo.com',
+    env:{
+      user: 'Cypress'
+    },
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on)
+      return config
     },
   },
 });
