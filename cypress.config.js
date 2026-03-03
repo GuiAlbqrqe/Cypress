@@ -8,6 +8,7 @@ module.exports = defineConfig({
       mochaFile: 'cypress/reports/junit/results-[hash].xml',
   },
   cypressMochawesomeReporterReporterOptions: {
+    reportDir: 'cypress/reports/html',
     charts: true,
     reportPageTitle: 'Relatório de Testes',
     embeddedScreenshots: true,
@@ -17,6 +18,9 @@ module.exports = defineConfig({
 },
   chromeWebSecurity: false,
   allowCypressEnv: false,
+  videosFolder: 'cypress/videos',
+  video: true,
+  screenshotsFolder: 'cypress/screenshots',
 
   e2e: {
     baseUrl: 'https://www.saucedemo.com',
