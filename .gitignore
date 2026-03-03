@@ -3,3 +3,5 @@ cypress/screenshots/
 cypress/videos/
 cypress/reports/
 reports/
+.vscode/
+.env.dev/
